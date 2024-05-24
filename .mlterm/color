@@ -1,0 +1,20 @@
+black=#272822
+red=#F92672
+green= #A6E22E
+yellow=#E6DB74
+blue=#55bcce
+magenta=#AE81FF
+cyan=#66D9EF
+orange=#FD971F
+white=#acada1
+hl_black=#76715e
+hl_red=#fa2772
+hl_green=#a7e22e
+hl_yellow=#e7db75
+hl_blue=#66d9ee
+hl_magenta=#ae82ff
+hl_cyan=#66efd5
+hl_white=#cfd0c2
+
+fg_color = #f1ebeb
+bg_color = #272822
