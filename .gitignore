@@ -1,4 +1,8 @@
 # mlterm
 /.mlterm/challenge
 *challenge*
+challenge
+
+# logs
+**/logs
 *.log
