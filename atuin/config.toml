@@ -23,10 +23,10 @@
 # timezone = "local"
 
 ## enable or disable automatic sync
-# auto_sync = true
+ auto_sync = true
 
 ## enable or disable automatic update checks
-# update_check = true
+ update_check = true
 
 ## address of the sync server
 # sync_address = "https://api.atuin.sh"
@@ -34,7 +34,7 @@
 ## how often to sync history. note that this is only triggered when a command
 ## is ran, so sync intervals may well be longer
 ## set it to 0 to sync after every command
-# sync_frequency = "10m"
+ sync_frequency = "5m"
 
 ## which search mode to use
 ## possible values: prefix, fulltext, fuzzy, skim
@@ -120,10 +120,10 @@
 ## Configure whether or not to show the help row, which includes the current Atuin
 ## version (and whether an update is available), a keymap hint, and the total
 ## amount of commands in your history.
-# show_help = true
+ show_help = true
 
 ## Configure whether or not to show tabs for search and inspect
-# show_tabs = true
+ show_tabs = true
 
 ## Defaults to true. This matches history against a set of default regex, and will not save it if we get a match. Defaults include
 ## 1. AWS key id
@@ -162,13 +162,13 @@ enter_accept = true
 
 [stats]
 ## Set commands where we should consider the subcommand for statistics. Eg, kubectl get vs just kubectl
-# common_subcommands = [
-#   "apt",
+ common_subcommands = [
+   "apt",
 #   "cargo",
 #   "composer",
 #   "dnf",
 #   "docker",
-#   "git",
+   "git",
 #   "go",
 #   "ip",
 #   "kubectl",
@@ -182,7 +182,7 @@ enter_accept = true
 #   "systemctl",
 #   "tmux",
 #   "yarn",
-# ]
+ ]
 
 ## Set commands that should be totally stripped and ignored from stats
 # common_prefix = ["sudo"]
@@ -205,5 +205,5 @@ enter_accept = true
 records = true
 
 # height of the search window
-inline_height = 40
+inline_height = 20
 style = "compact"
