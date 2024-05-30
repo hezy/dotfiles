@@ -2,6 +2,7 @@
 /.mlterm/challenge
 *challenge*
 challenge
+*.six
 
 # logs
 **/logs
