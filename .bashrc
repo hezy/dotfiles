@@ -387,6 +387,6 @@ echo -ne "\e[5 q"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
-eval "$(atuin init bash)"
+eval "$(atuin init bash --disable-up-arrow)"
 
 alias btop="btop --utf-force"
