@@ -1,9 +1,9 @@
 // config.kdl
 
 layout {
-    pane command="z ~/Repos/config && gitui"
+    pane command="z ~/.dotfiles && gitui"
     pane split_direction="vertical" {
-        pane command="z ~/Repos/config && find . -maxdepth 1 - type l"
+        pane command="z ~/.dotfiles && find . -maxdepth 1 - type l"
         pane command="z ~/.config && find . -maxdepth 1 - type l"
     }
 }
