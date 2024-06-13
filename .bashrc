@@ -127,12 +127,19 @@ PROMPT_DIRTRIM=0
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+
+# ===============================
+#    Text editor related stuff 
+# ===============================
+
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='hx'
  else
    export EDITOR='hx'
  fi
+
+alias code='codium'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -178,56 +185,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/hezy/mambaforge/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/hezy/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/home/hezy/mambaforge/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/hezy/mambaforge/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-
-if [ -f "/home/hezy/mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "/home/hezy/mambaforge/etc/profile.d/mamba.sh"
-fi
-# <<< conda initialize <<<
 
 
-
-
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-case ":$PATH:" in
-    *:/home/hezy/.juliaup/bin:*)
-        ;;
-
-    *)
-        export PATH=/home/hezy/.juliaup/bin${PATH:+:${PATH}}
-        ;;
-esac
-
-# <<< juliaup initialize <<<
-
-export EDITOR='hx'
-
-
-# >>> python ide alias list >>>
-alias spyder="~/mambaforge/envs/develop/bin/python ~/mambaforge/envs/develop/bin/spyder"
-alias jupyter-notebook="~/mambaforge/envs/develop/bin/python ~/mambaforge/envs/develop/bin/jupyter-notebook"
-alias jupyter-lab="~/mambaforge/envs/develop/bin/python ~/mambaforge/envs/develop/bin/jupyter-lab"
-alias sage="~/mambaforge/envs/sage-env/bin/sage"
-# <<< python ide alias list <<<
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then source /etc/profile.d/vte.sh; fi # Ubuntu Budgie END
-
-alias code='codium'
 
 
 # =============================================================================
@@ -380,6 +341,10 @@ export BAT_THEME="Monokai Extended Origin"
 
 alias zhx='zellij --layout $HOME/.config/zellij/layouts/helix.kdl'
 
+# ========================
+#    Bash related stuff   
+# ========================
+
 # cursor style
 # https://www.baeldung.com/linux/console-cursor-featuresecho 
 echo -ne "\e[5 q"
@@ -392,4 +357,69 @@ eval "$(atuin init bash --disable-up-arrow)"
 # for Glaucon:
 alias btop="btop --utf-force"
 
+
+# =======================
+#    Git related stuff
+# =======================
+
 alias gitupdate="git add -A && git commit -m \"updtae\" && git push"
+
+
+# =========================
+#    Julia related stuff 
+# =========================
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/hezy/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/hezy/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
+
+
+# ==========================
+#    Python related stuff
+# ==========================
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/hezy/mambaforge/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/hezy/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/home/hezy/mambaforge/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/hezy/mambaforge/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/home/hezy/mambaforge/etc/profile.d/mamba.sh" ]; then
+    . "/home/hezy/mambaforge/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
+
+
+# >>> python ide alias list >>>
+alias jupyter-notebook="~/mambaforge/envs/develop/bin/python ~/mambaforge/envs/develop/bin/jupyter-notebook"
+alias jupyter-lab="~/mambaforge/envs/develop/bin/python ~/mambaforge/envs/develop/bin/jupyter-lab"
+alias sage="~/mambaforge/envs/sage-env/bin/sage"
+# <<< python ide alias list <<<
+
+
+# <<<< Added by Spyder <<<<
+alias spyder=/home/hezy/.local/Spyder-5.5.5/envs/spyder-5.5.5/bin/spyder
+alias uninstall-spyder=/home/hezy/.local/Spyder-5.5.5/uninstall-spyder.sh
+# >>>> Added by Spyder >>>>
+
+
+
