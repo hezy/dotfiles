@@ -3,8 +3,8 @@
 
 [[language]]
 name = "julia"
-# julia -e 'using Pkg; Pkg.add("LanguageServer")'
-# julia -e 'using Pkg; Pkg.update()'
+julia -e 'using Pkg; Pkg.add("LanguageServer")'
+julia -e 'using Pkg; Pkg.update()'
 scope = "source.julia"
 injection-regex = "julia"
 file-types = ["jl"]
