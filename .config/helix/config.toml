@@ -34,7 +34,6 @@ skip-levels = 1
 # ''' = ''' #?
 # '`' = '`'
 
-()[]{}""''``
 [editor.statusline]
 left = ["mode", "spinner"]
 center = ["version-control", "file-absolute-path", "file-modification-indicator"]
