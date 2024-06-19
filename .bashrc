@@ -98,6 +98,10 @@ completions=(
 # Example format: aliases=(vagrant composer git-avh)
 # Add wisely, as too many aliases slow down shell startup.
 aliases=(
+# <<<< Added by Spyder <<<<
+alias spyder=/home/hezy/.local/Spyder-5.5.5/envs/spyder-5.5.5/bin/spyder
+alias uninstall-spyder=/home/hezy/.local/Spyder-5.5.5/uninstall-spyder.sh
+# >>>> Added by Spyder >>>>
   general
 )
 
@@ -400,6 +404,10 @@ else
     else
         export PATH="/home/hezy/mambaforge/bin:$PATH"
     fi
+# <<<< Added by Spyder <<<<
+alias spyder=/home/hezy/.local/Spyder-5.5.5/envs/spyder-5.5.5/bin/spyder
+alias uninstall-spyder=/home/hezy/.local/Spyder-5.5.5/uninstall-spyder.sh
+# >>>> Added by Spyder >>>>
 fi
 unset __conda_setup
 
@@ -417,9 +425,7 @@ alias sage="~/mambaforge/envs/sage-env/bin/sage"
 
 
 # <<<< Added by Spyder <<<<
-alias spyder=/home/hezy/.local/Spyder-5.5.5/envs/spyder-5.5.5/bin/spyder
-alias uninstall-spyder=/home/hezy/.local/Spyder-5.5.5/uninstall-spyder.sh
+alias spyder=/home/hezy/.local/Spyder-6/envs/spyder-runtime/bin/spyder
+alias uninstall-spyder=/home/hezy/.local/Spyder-6/uninstall-spyder.sh
 # >>>> Added by Spyder >>>>
-
-
 
