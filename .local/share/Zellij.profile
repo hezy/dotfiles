@@ -1,1 +1,0 @@
-konsole/Zellij.profile

@@ -1,1 +1,0 @@
-konsole/Julia.profile
