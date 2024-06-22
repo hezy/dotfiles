@@ -404,17 +404,13 @@ else
     else
         export PATH="/home/hezy/mambaforge/bin:$PATH"
     fi
-# <<<< Added by Spyder <<<<
-alias spyder=/home/hezy/.local/Spyder-5.5.5/envs/spyder-5.5.5/bin/spyder
-alias uninstall-spyder=/home/hezy/.local/Spyder-5.5.5/uninstall-spyder.sh
-# >>>> Added by Spyder >>>>
+
 fi
 unset __conda_setup
 
 if [ -f "/home/hezy/mambaforge/etc/profile.d/mamba.sh" ]; then
     . "/home/hezy/mambaforge/etc/profile.d/mamba.sh"
 fi
-# <<< conda initialize <<<
 
 
 # >>> python ide alias list >>>
@@ -428,4 +424,3 @@ alias sage="~/mambaforge/envs/sage-env/bin/sage"
 alias spyder=/home/hezy/.local/Spyder-6/envs/spyder-runtime/bin/spyder
 alias uninstall-spyder=/home/hezy/.local/Spyder-6/uninstall-spyder.sh
 # >>>> Added by Spyder >>>>
-
