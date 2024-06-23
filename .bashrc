@@ -404,6 +404,7 @@ else
     else
         export PATH="/home/hezy/mambaforge/bin:$PATH"
     fi
+
 fi
 unset __conda_setup
 
