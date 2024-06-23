@@ -404,10 +404,6 @@ else
     else
         export PATH="/home/hezy/mambaforge/bin:$PATH"
     fi
-# <<<< Added by Spyder <<<<
-alias spyder=/home/hezy/.local/Spyder-5.5.5/envs/spyder-5.5.5/bin/spyder
-alias uninstall-spyder=/home/hezy/.local/Spyder-5.5.5/uninstall-spyder.sh
-# >>>> Added by Spyder >>>>
 fi
 unset __conda_setup
 
