@@ -1,5 +1,5 @@
-fg_color = #ffffffffffff
 scrollbar_mode = right
+fg_color = #ffffffffffff
 bg_color = #272728282222
 vertical_mode = none
 type_engine = cairo
@@ -7,3 +7,4 @@ use_transbg = false
 wall_picture = 
 cursor_fg_color = #ffffffffffff
 scrollbar_view_name = mozmodern
+use_anti_alias = true
