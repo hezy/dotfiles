@@ -411,6 +411,7 @@ unset __conda_setup
 if [ -f "/home/hezy/mambaforge/etc/profile.d/mamba.sh" ]; then
     . "/home/hezy/mambaforge/etc/profile.d/mamba.sh"
 fi
+# <<< conda initialize <<<
 
 
 # >>> python ide alias list >>>
@@ -424,3 +425,4 @@ alias sage="~/mambaforge/envs/sage-env/bin/sage"
 alias spyder=/home/hezy/.local/Spyder-6/envs/spyder-runtime/bin/spyder
 alias uninstall-spyder=/home/hezy/.local/Spyder-6/uninstall-spyder.sh
 # >>>> Added by Spyder >>>>
+
