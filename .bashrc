@@ -98,10 +98,6 @@ completions=(
 # Example format: aliases=(vagrant composer git-avh)
 # Add wisely, as too many aliases slow down shell startup.
 aliases=(
-# <<<< Added by Spyder <<<<
-alias spyder=/home/hezy/.local/Spyder-5.5.5/envs/spyder-5.5.5/bin/spyder
-alias uninstall-spyder=/home/hezy/.local/Spyder-5.5.5/uninstall-spyder.sh
-# >>>> Added by Spyder >>>>
   general
 )
 
@@ -192,7 +188,7 @@ fi
 
 
 
-if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then source /etc/profile.d/vte.sh; fi # Ubuntu Budgie END
+#if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then source /etc/profile.d/vte.sh; fi # Ubuntu Budgie END
 
 
 # =============================================================================
@@ -421,8 +417,9 @@ alias sage="~/mambaforge/envs/sage-env/bin/sage"
 # <<< python ide alias list <<<
 
 
-# <<<< Added by Spyder <<<<
-alias spyder=/home/hezy/.local/Spyder-6/envs/spyder-runtime/bin/spyder
-alias uninstall-spyder=/home/hezy/.local/Spyder-6/uninstall-spyder.sh
-# >>>> Added by Spyder >>>>
 
+
+# >>> Added by Spyder >>>
+alias spyder=/home/hezy/.local/spyder-6/envs/spyder-runtime/bin/spyder
+alias uninstall-spyder=/home/hezy/.local/spyder-6/uninstall-spyder.sh
+# <<< Added by Spyder <<<
