@@ -1,5 +1,5 @@
 [Configuration]
-FontName=Liberation Mono 12
+FontName=Fira Code weight=453 12
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -28,10 +28,10 @@ MiscNewTabAdjacent=FALSE
 MiscSearchDialogOpacity=100
 MiscShowUnsafePasteDialog=TRUE
 MiscRightClickAction=TERMINAL_RIGHT_CLICK_ACTION_CONTEXT_MENU
-ColorForeground=#FFFFFF
-ColorCursor=#6F6F6F
-ColorPalette=#262626;#EE5396;#42BE65;#FFE97B;#33B1FF;#FF7EB6;#3DDBD9;#DDE1E6;#393939;#EE5396;#42BE65;#FFE97B;#33B1FF;#FF7EB6;#3DDBD9;#FFFFFF
+ColorForeground=#F8F8F2
+ColorCursor=#F8F8F2
+ColorPalette=#75715E;#F92672;#A6E22E;#F4BF75;#66D9EF;#AE81FF;#2AA198;#F9F8F5;#272822;#F92672;#A6E22E;#F4BF75;#66D9EF;#AE81FF;#2AA198;#F8F8F2
 ColorCursorUseDefault=FALSE
 FontAllowBold=FALSE
-ColorBackground=#161616
+ColorBackground=#000000000000
 
