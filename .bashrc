@@ -193,7 +193,7 @@ fi
 #    zoxide
 # ============
 
-eval "$(zoxide init bash)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/zoxide init bash)"
 
 # >>> dprint initialize >>>
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
