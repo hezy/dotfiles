@@ -320,7 +320,6 @@ eval "$(zoxide init bash)"
 
 
 # >>> dprint initialize >>>
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 case ":$PATH:" in
     *:/home/hezy/.dprint/bin:*)
