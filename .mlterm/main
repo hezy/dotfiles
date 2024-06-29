@@ -6,5 +6,12 @@ type_engine = cairo
 use_transbg = false
 wall_picture = 
 cursor_fg_color = #ffffffffffff
-scrollbar_view_name = mozmodern
+scrollbar_view_name = sample3
 use_anti_alias = true
+encoding = UTF-8
+use_auto_detect = false
+auto_detect_encodings = UTF-8,EUC-JP,SJIS
+regard_uri_as_word = true
+bell mode = visual
+logsize 4096
+name = xterm
