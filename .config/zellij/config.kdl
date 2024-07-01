@@ -1,15 +1,11 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
-keybinds clear-defaults=true{
+keybinds {
     normal {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
     }
     locked {
         bind "Ctrl g" { SwitchToMode "Normal"; }
-        // bind "Alt h" { MoveFocusOrTab "Left"; }
-        // bind "Alt l" { MoveFocusOrTab "Right"; }
-        // bind "Alt j" { MoveFocus "Down"; }
-        // bind "Alt k" { MoveFocus "Up"; }
     }
     resize {
         bind "Ctrl n" { SwitchToMode "Normal"; }
@@ -73,7 +69,7 @@ keybinds clear-defaults=true{
         bind "Tab" { ToggleTab; }
     }
     scroll {
-        // bind "Ctrl s" { SwitchToMode "Normal"; }
+        bind "Ctrl s" { SwitchToMode "Normal"; }
         bind "e" { EditScrollback; SwitchToMode "Normal"; }
         bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
@@ -87,7 +83,7 @@ keybinds clear-defaults=true{
         // bind "Alt c" { Copy; }
     }
     search {
-        // bind "Ctrl s" { SwitchToMode "Normal"; }
+        bind "Ctrl s" { SwitchToMode "Normal"; }
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up" { ScrollUp; }
@@ -114,7 +110,7 @@ keybinds clear-defaults=true{
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
     session {
-        // bind "Ctrl o" { SwitchToMode "Normal"; }
+        bind "Ctrl o" { SwitchToMode "Normal"; }
         bind "Ctrl s" { SwitchToMode "Scroll"; }
         bind "d" { Detach; }
         bind "w" {
@@ -127,7 +123,7 @@ keybinds clear-defaults=true{
     }
     tmux {
         bind "[" { SwitchToMode "Scroll"; }
-        // bind "Ctrl b" { Write 2; SwitchToMode "Normal"; }
+        bind "Ctrl b" { Write 2; SwitchToMode "Normal"; }
         bind "\"" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "%" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "z" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
@@ -144,20 +140,26 @@ keybinds clear-defaults=true{
         bind "j" { MoveFocus "Down"; SwitchToMode "Normal"; }
         bind "k" { MoveFocus "Up"; SwitchToMode "Normal"; }
         bind "o" { FocusNextPane; }
-        bind "d" { Detach; }
-        bind "Space" { NextSwapLayout; }
+        bind "d" { Detach; }//        bind "Space" { NextSwapLayout; }
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
     }
-    shared_except "locked" {
-        bind "Ctrl g" { SwitchToMode "Locked"; }
-        bind "Ctrl q" { Quit; }
-        // bind "Alt n" { NewPane; }
-        // bind "Alt i" { MoveTab "Left"; }
-        // bind "Alt o" { MoveTab "Right"; }
+    shared {
         bind "Alt h" "Alt Left" { MoveFocusOrTab "Left"; }
         bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
         bind "Alt j" "Alt Down" { MoveFocus "Down"; }
         bind "Alt k" "Alt Up" { MoveFocus "Up"; }
+        bind "Alt m" { ToggleFloatingPanes; }
+    }
+    shared_except "locked" {
+        bind "Ctrl g" { SwitchToMode "Locked"; }
+        bind "Ctrl q" { Quit; }
+        bind "Alt n" { NewPane; }
+        bind "Alt i" { MoveTab "Left"; }
+        bind "Alt o" { MoveTab "Right"; }
+//       bind "Alt h" "Alt Left" { MoveFocusOrTab "Left"; }
+//       bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
+//       bind "Alt j" "Alt Down" { MoveFocus "Down"; }
+//       bind "Alt k" "Alt Up" { MoveFocus "Up"; }
         bind "Alt =" "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt [" { PreviousSwapLayout; }
@@ -173,10 +175,10 @@ keybinds clear-defaults=true{
         bind "Ctrl n" { SwitchToMode "Resize"; }
     }
     shared_except "scroll" "locked" {
-        // bind "Ctrl s" { SwitchToMode "Scroll"; }
+        bind "Ctrl s" { SwitchToMode "Scroll"; }
     }
     shared_except "session" "locked" {
-        // bind "Ctrl o" { SwitchToMode "Session"; }
+        bind "Ctrl o" { SwitchToMode "Session"; }
     }
     shared_except "tab" "locked" {
         bind "Ctrl t" { SwitchToMode "Tab"; }
@@ -185,7 +187,7 @@ keybinds clear-defaults=true{
         bind "Ctrl h" { SwitchToMode "Move"; }
     }
     shared_except "tmux" "locked" {
-        // bind "Ctrl b" { SwitchToMode "Tmux"; }
+        bind "Ctrl b" { SwitchToMode "Tmux"; }
     }
 }
 
@@ -288,7 +290,7 @@ plugins {
 // The name of the default layout to load on startup
 // Default: "default"
 //
-default_layout "yazelix"
+// default_layout "compact"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal
@@ -339,7 +341,7 @@ default_layout "yazelix"
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
 //
-scrollback_editor "hx"
+// scrollback_editor "/usr/bin/vim"
 
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
@@ -350,7 +352,7 @@ scrollback_editor "hx"
 
 // The folder in which Zellij will look for layouts
 //
-// layout_dir "/home/lucca/.config/yazelix/zellij/layouts"
+// layout_dir "/path/to/my/layout_dir"
 
 // The folder in which Zellij will look for themes
 //
@@ -367,3 +369,13 @@ scrollback_editor "hx"
 // Default: false
 //
 // disable_session_metadata true
+
+shared_except "locked" {
+// ...
+    bind "Alt f" {
+        LaunchPlugin "filepicker" {
+            // floating true // uncomment this to have the filepicker opened in a floating window
+            close_on_selection true // comment this out to have the filepicker remain open even after selecting a file
+        };
+    }
+}
